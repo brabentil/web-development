@@ -11,7 +11,7 @@ body{
     background-color: #eee9e9;
     border-radius: 16px;
     padding: 20px;
-    box-shadow: 0 0 12px rgba(0 0 0 0.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,31 +22,29 @@ body{
     margin-bottom: 1.5rem;
 }
 
-.timer{
-    font-size: 40px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0 0 0 0.1);
-    animation: pulse 1.5s infinite alternate;
-
-}
 .stopwatch{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
+.timer{
+    font-size: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    animation: pulse 1.5s infinite alternate;
+}
+
 @keyframes pulse {
     from{
-
         transform: scale(1);
-           
     }
     
     to{
-          transform: scale(1.05);
+        transform: scale(1.05);
     }
 }
 
@@ -54,13 +52,11 @@ body{
     width: 110px;
     display: inline-block;
     text-align: center;
-
 }
 
-.controls{
+.contorls{
     display: flex;
     gap: 1rem;
-
 }
 
 button{
@@ -68,10 +64,10 @@ button{
     font-size: 1rem;
     background-color: #f25191;
     color: #ffffff;
-    border:none;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-
+    transition:   background-color 0.3s ease-in-out;
 }
 
 button:hover{
@@ -80,7 +76,6 @@ button:hover{
 
 .lap-title{
     font-size: 1.5rem;
-
 }
 
 .laps{
@@ -91,11 +86,11 @@ ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow-y:auto ;
+    overflow-y: auto;
     max-height: 200px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0 0 0 0.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 li{
@@ -105,7 +100,6 @@ li{
 
 li:last-child{
     border-bottom: none;
-
 }
 
 li span{
