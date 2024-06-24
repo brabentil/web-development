@@ -74,5 +74,26 @@ button{
     padding: 15px 30px;
     background-color: #4caf50;
     width: 500px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color;
+
     
+}
+
+button:hover{
+    background-color: #33022b ;
+}
+
+#result{
+    font-size: 20px;
+    margin-top: 20px;
+    color: azure;
+    font-weight: bold;
+    animation: neonGlow 1s infinite alternate;
 }
