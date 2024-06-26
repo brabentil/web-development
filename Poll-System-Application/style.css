@@ -7,42 +7,36 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 
 .container{
-    color: #ffffff;
+    color: #f3f3f3;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 2px 5px rgba(0, 0, o, 0.1);
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    animation:cardAnimation 1s ease-in-out ;
+    animation:cardAnimation 1s ease-in-out;
 }
 
 @keyframes cardAnimation {
     0%{
         transform: scale(0);
         opacity: 0;
-
     }
     100%{
         transform: scale(1);
-        opacity: 1 ;
-
+        opacity: 1;
     }
-    
 }
 
 h1{
     color: #ff1493;
     font-size: 32px;
     opacity: 1;
-
 }
 
 .poll{
     margin-top: 20px;
-
 }
 
 h2{
@@ -55,17 +49,16 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .option{
     margin-bottom: 10px;
-
 }
 
 input[type="radio"]{
     display: none;
 }
+
 label{
     display: inline-block;
     background-color: #f3f3f3;
@@ -81,13 +74,11 @@ label{
 
 .option:hover{
     background-color: #ff1493;
-    
 }
 
 .option input[type="radio"]:checked + label{
     background-color: #ff1493;
     color: #ffffff;
-
 }
 
 button{
@@ -103,4 +94,47 @@ button{
 
 button:hover{
     background-color: #ff0055;
+}
+
+#result{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff1493;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option-result{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.option-text{
+    flex: 1;
+}
+
+.bar-container{
+    flex: 3;
+    background-color: #f3f3f3;
+    height: 10px;
+    margin-left: 20px;
+    bottom: 5px;
+    overflow: hidden;
+}
+
+.bar{
+    height: 100%;
+    background-color: #ff1493;
+    width: 0;
+    transition: width 0.5s ease-out;
+}
+
+.percentage{
+    flex: 1;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ff1493;
 }
