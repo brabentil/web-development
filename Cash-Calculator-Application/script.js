@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const txt20pesewas = document.getElementById("txt20pesewas");
 
     const resetButton = document.getElementById("reset"); 
-    const txtFinalCash = document.getElementById("txtFInalCash");
-    const txtFinalCashInWords = document.getElementById("txtFInalCashInWords");
+    const txtFinalCash = document.getElementById("txtFinalCash");
+    const txtFinalCashInWords = document.getElementById("txtFinalCashInWords");
 
     const cashInputs = [cedis200, cedis100, cedis50, cedis20, cedis10, cedis5, cedis2, cedis1, pesewas50, pesewas20];
     const cashTexts = [txt200, txt100, txt50, txt20, txt10, txt5, txt2, txt1, txt50pesewas, txt20pesewas];
@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
             totalCashValues += isNaN(value) ? 0 : value;
         });
 
-        txtFinalCash.textContent = "Total Cash: GHS " + totalCashValues.toFixed(2);
+        txtFinalCash.textContent = `Total Cash: GHS ${totalCashValues.toFixed(2)}`;
+        txtFinalCashInWords.textContent =`Total cash in words : ${convertCedisAndPesewas(totalCashValues)}`;
        
     };
 
@@ -74,4 +75,65 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     resetButton.addEventListener("click", resetData); 
+
+    function convertToWords(number) {
+        const units = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+        const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+        const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+    
+        if (number === 0) {
+            return 'Zero';
+        }
+    
+        let words = '';
+    
+        if (Math.floor(number / 1000000) > 0) {
+            words += convertToWords(Math.floor(number / 1000000)) + ' Million ';
+            number %= 1000000;
+        }
+    
+        if (Math.floor(number / 1000) > 0) {
+            words += convertToWords(Math.floor(number / 1000)) + ' Thousand ';
+            number %= 1000;
+        }
+    
+        if (Math.floor(number / 100) > 0) {
+            words += convertToWords(Math.floor(number / 100)) + ' Hundred ';
+            number %= 100;
+        }
+    
+        if (number > 0) {
+            if (number < 10) {
+                words += units[number];
+            } else if (number < 20) {
+                words += teens[number - 10];
+            } else {
+                words += tens[Math.floor(number / 10)];
+                if (number % 10 > 0) {
+                    words += ' ' + units[number % 10];
+                }
+            }
+        }
+    
+        return words.trim();
+    }
+    
+    function convertCedisAndPesewas(amount) {
+        const cedis = Math.floor(amount);
+        const pesewas = Math.round((amount - cedis) * 100);
+        let words = '';
+    
+        if (cedis > 0) {
+            words += convertToWords(cedis) + (cedis === 1 ? ' Cedi ' : ' Cedis ');
+        }
+    
+        if (pesewas > 0) {
+            words += convertToWords(pesewas) + (pesewas === 1 ? ' Pesewa' : ' Pesewas');
+        }
+    
+        return words.trim();
+    }
+    
+  
+    
 });
