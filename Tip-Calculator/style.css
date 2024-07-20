@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #4f4657, #252525);
+    background: linear-gradient(135deg, #8E9EAB, #E6E9F0);
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,19 +11,20 @@ body {
 
 .container {
     max-width: 500px;
+    width: 90%;
     margin: auto;
-    padding: 20px;
-    background-color: #333;
+    padding: 30px;
+    background-color: #F3F4F6;
     border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #fff;
+    color: #333;
     padding-bottom: 20px;
     margin-bottom: 30px;
-    border-bottom: 2px solid #ff7b72;
+    border-bottom: 2px solid #C1C7D0;
     font-size: 24px;
 }
 
@@ -34,7 +35,7 @@ h1 {
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    color: #ccc;
+    color: #555;
     font-weight: bold;
     font-size: 14px;
 }
@@ -44,11 +45,12 @@ h1 {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    border: 1px solid #ff7b72;
+    border: 1px solid #A0AEC0;
     border-radius: 5px;
-    background-color: #444;
-    color: #fff;
+    background-color: #FFF;
+    color: #333;
     transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
 .input-group input::-webkit-outer-spin-button,
@@ -59,33 +61,33 @@ h1 {
 .input-group input:focus,
 .input-group select:focus {
     outline: none;
-    border-color: #ff3b2e;
+    border-color: #718096;
 }
 
 .result {
     margin-top: 30px;
-    border-top: 2px solid #ff7b72;
+    border-top: 2px solid #C1C7D0;
     padding-top: 20px;
 }
 
 .result h2 {
     margin-bottom: 15px;
-    color: #ff7b72;
+    color: #333;
     font-size: 20px;
 }
 
 .result div {
     margin-bottom: 10px;
-    color: #ccc;
+    color: #555;
 }
 
 #calculateBtn {
     width: 100%;
     padding: 14px;
-    background-color: #ff3b2e;
+    background-color: #2B6CB0;
     border-radius: 5px;
     border: none;
-    color: #fff;
+    color: #FFF;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -94,5 +96,5 @@ h1 {
 }
 
 #calculateBtn:hover {
-    background-color: #e62d1c;
+    background-color: #2C5282;
 }
