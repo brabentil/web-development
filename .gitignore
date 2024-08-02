@@ -1,1 +1,14 @@
-.vscode
+# Ignore Visual Studio Code settings directory
+.vscode/
+
+# Ignore node_modules directory where dependencies are installed
+node_modules/
+
+# Ignore .env file for storing environment variables 
+.env
+
+# Ignore package-lock.json file which is used to lock the versions of dependencies
+package-lock.json
+
+# Ignore package.json file which lists the project's dependencies and scripts
+package.json

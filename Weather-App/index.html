@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="not-found">
+            <img src="images/error1.png" alt="">
+            <p>Oops! Invalid Location</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="./" alt="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+        <div class="weather-details">
+            <div class="city-name"></div>
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+            <div class="visibility">
+                <i class="fa-solid fa-eye"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Visibility</p>
+                </div>
+            </div>
+            <div class="pressure">
+                <i class="fa-solid fa-tachometer-alt"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Pressure</p>
+                </div>
+            </div>
+            <div class="sunrise">
+                <i class="fa-solid fa-sun"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Sunrise</p>
+                </div>
+            </div>
+            <div class="sunset">
+                <i class="fa-solid fa-moon"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Sunset</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/34a534699b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
