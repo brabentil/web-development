@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWE-Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/wwe-logo-removebg.png" alt="WWE Logo" class="logo">
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <video id="wwe-slide-1" autoplay loop muted class="active">
+                <source src="images/DomAndLiv1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="wwe-slide-2" loop muted>
+                <source src="images/DomAndLiv2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="wwe-slide-3" loop muted>
+                <source src="images/LoganPaulCrazyMove.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="wwe-slide-4" loop muted>
+                <source src="images/LAKnightWins.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="wwe-slide-5" loop muted>
+                <source src="images/BayleyPowerbombsNia.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="wwe-slide-6" loop muted>
+                <source src="images/RomanEntranceMusic.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="wwe-slide-7" loop muted>
+                <source src="images/RomanReignsFullReturn.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="dot-container">
+            <button onclick="dot(1)" class="active"></button>
+            <button onclick="dot(2)"></button>
+            <button onclick="dot(3)"></button>
+            <button onclick="dot(4)"></button>
+            <button onclick="dot(5)"></button>
+            <button onclick="dot(6)"></button>
+            <button onclick="dot(7)"></button>
+        </div>
+        <button id="prev" onclick="prev()">&lt;</button>
+        <button id="next" onclick="next()">&gt;</button>
+    </div>
+    <p class="summerslam-text">Summerslam was awesome!</p>
+    <script src="script.js"></script>
+</body>
+</html>
