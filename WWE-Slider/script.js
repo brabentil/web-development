@@ -19,9 +19,11 @@ function showSlide(slideIndex) {
         video.pause();
         if (index === currentSlide - 1) {
             video.classList.add('active');
-            video.currentTime = 0;  
+            video.currentTime = 0;
             video.muted = false;
-            video.play();
+            video.play().catch(error => {
+                // Handle error if needed
+            });
         }
     });
 
@@ -47,4 +49,32 @@ function dot(slideIndex) {
 
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
+
+
+    videos.forEach((video) => {
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                video.play().catch(error => {
+
+                });
+            } else {
+                video.pause();
+            }
+        });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.code === 'Space') {
+            event.preventDefault(); 
+            const activeVideo = document.querySelector('.image-container video.active');
+            if (activeVideo) {
+                if (activeVideo.paused) {
+                    activeVideo.play().catch(error => {
+                    });
+                } else {
+                    activeVideo.pause();
+                }
+            }
+        }
+    });
 });
