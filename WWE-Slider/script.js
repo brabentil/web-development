@@ -1,5 +1,5 @@
 let currentSlide = 1;
-const totalSlides = 7;
+const totalSlides = 13;
 
 const videos = document.querySelectorAll('.image-container video');
 const dots = document.querySelectorAll('.dot-container button');
