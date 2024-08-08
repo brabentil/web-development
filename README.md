@@ -106,4 +106,12 @@ This repository contains a collection of frontend projects demonstrating profici
     - **Files**: `index.html`, `style.css`, `script.js`
     - **Folder**: `age-calculator`
 
+21. **WWE Slider**
+    - **Description**: Displays various videos from Summerslam weekend with a slider.
+    - **Files**: `index.html`, `style.css`, `script.js`
+    - **Folder**: `WWE-slider`
 
+22. **Weather App**
+    - **Description**: A weather application that uses the weather API to display current weather conditions.
+    - **Files**: `index.html`, `style.css`, `script.js`
+    - **Folder**: `Weather-app`
