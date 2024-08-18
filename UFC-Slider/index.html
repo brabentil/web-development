@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC-Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-slider">
+        <video autoplay loop muted id="video">
+            <source src="assets/videos/dan-hooker-postmatch.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <ul class="thumbnail">
+            <li onclick="videoURL('assets/videos/dan-hooker-postmatch.mp4')">
+                <img src="assets/images/Dan-hooker-postfight.png">
+            </li>
+            <li onclick="videoURL('assets/videos/kara-france finish.mp4')">
+                <img src="assets/images/kara-france-finish.png">
+            </li>
+            <li onclick="videoURL('assets/videos/DDP-finish.mp4')">
+                <img src="assets/images/DDP-finish.png">
+            </li>
+            <li onclick="videoURL('assets/videos/IzzyAndDDP-postfight.mp4')">
+                <img src="assets/images/ddp-izzy-postfight.png">
+            </li>
+            <li onclick="videoURL('assets/videos/ddp-postfight.mp4')">
+                <img src="assets/images/ddp-postfight.png">
+            </li>
+        </ul>
+        <button id="mute-btn" onclick="toggleMute()">🔇</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
