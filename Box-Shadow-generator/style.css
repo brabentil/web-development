@@ -1,0 +1,204 @@
+
+:root {
+    --primary-color: #4a90e2; 
+    --primary-hover-color: #357ab7; 
+    --primary-active-color: #2c5aa0; 
+    --light-bg-color: #f0f4f8; 
+    --lighter-bg-color: #861d7d; 
+    --text-color: #333; 
+    --white-color: #fff; 
+    --box-shadow-color: rgba(0,0,0,0.1);
+    --slider-bg: #e0e0e0; 
+    --slider-hover-bg: #cfd8dc; 
+    --code-bg: #f9f9f9; 
+    --code-border: #e0e0e0; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--light-bg-color), var(--lighter-bg-color));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--box-shadow-color);
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.result {
+    flex: 1 1 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element {
+    width: 200px;
+    height: 200px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.sliders {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slider-wrapper, .input-wrapper, .code-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.slider-wrapper label, .input-wrapper label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.slider-wrapper input[type="range"] {
+  
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: var(--slider-bg);
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.slider-wrapper input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slider-wrapper input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slider-wrapper input[type="range"]:hover {
+    background: var(--slider-hover-bg);
+}
+
+.slider-wrapper input[type="range"]:hover::-webkit-slider-thumb {
+    background: var(--primary-hover-color);
+}
+
+.slider-wrapper input[type="range"]:hover::-moz-range-thumb {
+    background: var(--primary-hover-color);
+}
+
+.slider-wrapper input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.slider-wrapper input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+.input-wrapper input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.input-wrapper input[type="checkbox"]:hover {
+    transform: scale(1.1);
+}
+
+.code-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#code {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--code-border);
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+    background: var(--code-bg);
+}
+
+#code:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background: var(--primary-active-color);
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .result, .sliders {
+        flex: 1 1 100%;
+    }
+
+    .element {
+        width: 150px;
+        height: 150px;
+    }
+}
